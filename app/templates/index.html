@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h1>Back to basics, eh {{ user.username }}</h1>
+    <h1>Back to basics, eh {{ current_user.username }}</h1>
     {% for post in posts %}
       <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
