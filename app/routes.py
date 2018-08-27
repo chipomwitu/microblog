@@ -1,5 +1,5 @@
 from app import app, db
-from app.forms import LoginForm
+from app.forms import LoginForm, EditProfileForm
 from app.models import User
 from datetime import datetime
 from flask import flash, redirect, render_template, request, url_for
@@ -15,10 +15,10 @@ def before_request():
 @app.route('/')
 @app.route('/index')
 @login_required
-def index(): 
+def index():
     posts=[
         {
-            'author': {'username': 'Marundu'}, 
+            'author': {'username': 'Marundu'},
             'body': 'Discomfitting deja vu'
         },
         {
@@ -26,7 +26,7 @@ def index():
             'body': 'Where has time gone?'
         }
     ]
-    
+
     return render_template('index.html', title='Home', posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -60,7 +60,7 @@ def user(username):
         {'author': user, 'body': 'No man steps into the same river twice.'},
         {'author': user, 'body': 'Appreciate the seasons and let them pass.'}
     ]
-    
+
     return render_template('user.html', user=user, posts=posts)
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
@@ -73,7 +73,7 @@ def edit_profile():
         db.session.commit()
         flash('Your changes have been saved!')
         return redirect(url_for('edit_profile'))
-    
+
     elif request.method=='GET':
         form.username.data=current_user.username
         form.about_me.data=current_user.about_me
