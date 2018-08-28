@@ -2,6 +2,7 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+
 from config import Config
 
 app=Flask(__name__)
@@ -13,4 +14,4 @@ login.login_view='login'
 db=SQLAlchemy(app)
 migrate=Migrate(app, db)
 
-from app import routes, models
+from app import errors, models, routes
