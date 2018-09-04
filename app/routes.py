@@ -1,5 +1,5 @@
 from app import app, db
-from app.forms import LoginForm, EditProfileForm
+from app.forms import EditProfileForm, LoginForm, RegisterForm
 from app.models import User
 from datetime import datetime
 from flask import flash, redirect, render_template, request, url_for
@@ -28,6 +28,20 @@ def index():
     ]
 
     return render_template('index.html', title='Home', posts=posts)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    form=RegisterForm()
+    if form.validate_on_submit():
+        user=User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Yaaaaaay! You are now registered!')
+        return redirect(url_for('login'))
+    return render_template('register.html', title='Register', form=form)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -66,7 +80,7 @@ def user(username):
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
-    form=EditProfileForm()
+    form=EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username=form.username.data
         current_user.about_me=form.about_me.data
