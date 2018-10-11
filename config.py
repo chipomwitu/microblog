@@ -17,4 +17,4 @@ class Config(object):
     ADMINS=['marundurecipeapp@gmail.com']
     
     # Pagination
-    POSTS_PER_PAGE=3
+    POSTS_PER_PAGE=20
