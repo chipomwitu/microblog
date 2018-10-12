@@ -3,3 +3,5 @@
 __pycache__/
 flaskdbcommands.txt
 logs/
+
+email_stuffs.txt
