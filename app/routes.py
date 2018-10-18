@@ -1,5 +1,6 @@
 from app import app, db
-from app.forms import EditProfileForm, LoginForm, RegisterForm, PostForm
+from app.email import send_password_reset_email
+from app.forms import EditProfileForm, LoginForm, PostForm, RegisterForm, ResetPasswordForm
 from app.models import User, Post
 
 from datetime import datetime
@@ -170,3 +171,16 @@ def unfollow(username):
     return redirect(url_for('user', username=username))
 
 
+@app.route('/reset_password_request', methods=['GET', 'POST'])
+def reset_password_request():   
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    
+    form=ResetPasswordRequestForm()
+    if form.validate_on_submit():   
+        user=User.query.filterb_y(email=form.email.data).first()
+        if user:
+            send_password_reset_email(user)
+        flash('Check your email for the instructions to reset your password')
+        return redirect(url_for('login'))
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
