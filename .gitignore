@@ -3,5 +3,6 @@
 __pycache__/
 flaskdbcommands.txt
 logs/
+messages.pot
 
 email_stuffs.txt
