@@ -14,10 +14,11 @@ class Config(object):
     MAIL_USE_SSL=os.environ.get('MAIL_USE_SSL')
     MAIL_USERNAME=os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD')
-    ADMINS=['marundurecipeapp@gmail.com']
+    ADMINS=['chipomwitu88@gmail.com']
 
     # Pagination
     POSTS_PER_PAGE=20
 
     # Languages
-    LANGUAGES=['pt-BR', 'en-GB', 'sw-KE']
+    LANGUAGES=['en', 'es']
+    # LANGUAGES=['pt-BR', 'en-GB', 'sw-KE']

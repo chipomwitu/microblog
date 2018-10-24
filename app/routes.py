@@ -1,6 +1,6 @@
 from app import app, db
 from app.email import send_password_reset_email
-from app.forms import EditProfileForm, LoginForm, PostForm, RegisterForm, ResetPasswordForm
+from app.forms import EditProfileForm, LoginForm, PostForm, RegisterForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User, Post
 
 from datetime import datetime
