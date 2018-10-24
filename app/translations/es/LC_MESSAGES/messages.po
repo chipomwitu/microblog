@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-23 17:40+0300\n"
+"POT-Creation-Date: 2018-10-24 16:48+0300\n"
 "PO-Revision-Date: 2018-10-24 16:37+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,26 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: app/forms.py:10 app/forms.py:27 app/forms.py:33
-msgid "Username"
-msgstr ""
-
-#: app/forms.py:11 app/forms.py:52
-msgid "Email"
-msgstr ""
-
-#: app/forms.py:12 app/forms.py:28 app/forms.py:56
-msgid "Password"
-msgstr ""
-
-#: app/forms.py:13
-msgid "Confirm Password"
-msgstr ""
-
-#: app/forms.py:14 app/templates/register.html:6
-msgid "Register"
-msgstr ""
-
 #: app/forms.py:19
 msgid "Please pick a different username."
 msgstr ""
@@ -46,40 +26,8 @@ msgstr ""
 msgid "Please pick a different email address."
 msgstr ""
 
-#: app/forms.py:29
-msgid "Remember Me"
-msgstr ""
-
-#: app/forms.py:30 app/templates/login.html:5
-msgid "Log In"
-msgstr ""
-
-#: app/forms.py:34
-msgid "About me"
-msgstr ""
-
-#: app/forms.py:35 app/forms.py:49
-msgid "Submit"
-msgstr ""
-
 #: app/forms.py:45
 msgid "Please use a different username."
-msgstr ""
-
-#: app/forms.py:48
-msgid "Say something..."
-msgstr ""
-
-#: app/forms.py:53
-msgid "Request Password Reset"
-msgstr ""
-
-#: app/forms.py:57
-msgid "Confirm password"
-msgstr ""
-
-#: app/forms.py:58
-msgid "Reset Password"
 msgstr ""
 
 #: app/routes.py:31
@@ -141,6 +89,11 @@ msgstr ""
 msgid "An unexpected error has occurred :-("
 msgstr ""
 
+#: app/templates/_post.html:15
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
 msgstr ""
@@ -152,6 +105,14 @@ msgstr ""
 #: app/templates/index.html:6
 #, python-format
 msgid "Back to basics, eh, %(username)s..."
+msgstr ""
+
+#: app/templates/login.html:5
+msgid "Log In"
+msgstr ""
+
+#: app/templates/register.html:6
+msgid "Register"
 msgstr ""
 
 #: app/templates/reset_password.html:5
@@ -179,4 +140,37 @@ msgstr ""
 #: app/templates/user.html:46
 msgid "Older posts"
 msgstr ""
+
+#~ msgid "Username"
+#~ msgstr ""
+
+#~ msgid "Email"
+#~ msgstr ""
+
+#~ msgid "Password"
+#~ msgstr ""
+
+#~ msgid "Confirm Password"
+#~ msgstr ""
+
+#~ msgid "Remember Me"
+#~ msgstr ""
+
+#~ msgid "About me"
+#~ msgstr ""
+
+#~ msgid "Submit"
+#~ msgstr ""
+
+#~ msgid "Say something..."
+#~ msgstr ""
+
+#~ msgid "Request Password Reset"
+#~ msgstr ""
+
+#~ msgid "Confirm password"
+#~ msgstr ""
+
+#~ msgid "Reset Password"
+#~ msgstr ""
 
