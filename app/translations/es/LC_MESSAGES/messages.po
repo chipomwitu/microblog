@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-10-24 16:48+0300\n"
-"PO-Revision-Date: 2018-10-24 16:37+0300\n"
+"POT-Creation-Date: 2018-11-20 10:40+0300\n"
+"PO-Revision-Date: 2018-11-20 10:06+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
@@ -26,58 +26,58 @@ msgstr ""
 msgid "Please pick a different email address."
 msgstr ""
 
-#: app/forms.py:45
+#: app/forms.py:46
 msgid "Please use a different username."
 msgstr ""
 
-#: app/routes.py:31
+#: app/routes.py:33
 msgid "Your post is now live!"
 msgstr ""
 
-#: app/routes.py:73
+#: app/routes.py:75
 msgid "Yay! You are now registered!"
 msgstr ""
 
-#: app/routes.py:86
+#: app/routes.py:88
 msgid "Invalid username or password"
 msgstr ""
 
-#: app/routes.py:100
+#: app/routes.py:102
 msgid "See you again soon!"
 msgstr ""
 
-#: app/routes.py:129
+#: app/routes.py:131
 msgid "Your changes have been saved!"
 msgstr ""
 
-#: app/routes.py:143 app/routes.py:162
+#: app/routes.py:145 app/routes.py:164
 #, python-format
 msgid "User %(username)s not found."
 msgstr ""
 
-#: app/routes.py:147
+#: app/routes.py:149
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app/routes.py:153
+#: app/routes.py:155
 #, python-format
 msgid "You are now following %(username)s!"
 msgstr ""
 
-#: app/routes.py:166
+#: app/routes.py:168
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app/routes.py:172
+#: app/routes.py:174
 #, python-format
 msgid "You are no longer following %(username)s"
 msgstr ""
 
-#: app/routes.py:186
+#: app/routes.py:188
 msgid "Check your email for the instructions to reset your password"
 msgstr ""
 
-#: app/routes.py:204
+#: app/routes.py:206
 msgid "Your password has been reset"
 msgstr ""
 
@@ -85,8 +85,18 @@ msgstr ""
 msgid "File not found :-("
 msgstr ""
 
+#: app/templates/404.html:6 app/templates/500.html:7
+msgid "Back"
+msgstr ""
+
 #: app/templates/500.html:5
 msgid "An unexpected error has occurred :-("
+msgstr ""
+
+#: app/templates/500.html:6
+msgid ""
+"The system administrator has been notified. We apologize for the "
+"inconvenience"
 msgstr ""
 
 #: app/templates/_post.html:15
@@ -98,6 +108,26 @@ msgstr ""
 msgid "Welcome to Microblog"
 msgstr ""
 
+#: app/templates/base.html:23
+msgid "Home"
+msgstr ""
+
+#: app/templates/base.html:24
+msgid "Explore"
+msgstr ""
+
+#: app/templates/base.html:29
+msgid "Login"
+msgstr ""
+
+#: app/templates/base.html:31
+msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:32
+msgid "Logout"
+msgstr ""
+
 #: app/templates/edit_profile.html:6
 msgid "Edit Profile"
 msgstr ""
@@ -107,8 +137,32 @@ msgstr ""
 msgid "Back to basics, eh, %(username)s..."
 msgstr ""
 
+#: app/templates/index.html:21 app/templates/user.html:42
+msgid "Newer posts"
+msgstr ""
+
+#: app/templates/index.html:25 app/templates/user.html:46
+msgid "Older posts"
+msgstr ""
+
 #: app/templates/login.html:5
 msgid "Log In"
+msgstr ""
+
+#: app/templates/login.html:12
+msgid "New user?"
+msgstr ""
+
+#: app/templates/login.html:12
+msgid "Click to register"
+msgstr ""
+
+#: app/templates/login.html:15
+msgid "Forgot your password?"
+msgstr ""
+
+#: app/templates/login.html:15
+msgid "Click to reset"
 msgstr ""
 
 #: app/templates/register.html:6
@@ -123,9 +177,17 @@ msgstr ""
 msgid "Reset password"
 msgstr ""
 
+#: app/templates/user.html:8
+msgid "User"
+msgstr ""
+
+#: app/templates/user.html:15
+msgid "Last seen on"
+msgstr ""
+
 #: app/templates/user.html:18
 #, python-format
-msgid "%(count)d }} followers"
+msgid "%(count)d followers"
 msgstr ""
 
 #: app/templates/user.html:18
@@ -133,44 +195,15 @@ msgstr ""
 msgid "%(count)d following"
 msgstr ""
 
-#: app/templates/user.html:42
-msgid "Newer posts"
+#: app/templates/user.html:21
+msgid "Edit your profile"
 msgstr ""
 
-#: app/templates/user.html:46
-msgid "Older posts"
+#: app/templates/user.html:23
+msgid "Follow"
 msgstr ""
 
-#~ msgid "Username"
-#~ msgstr ""
-
-#~ msgid "Email"
-#~ msgstr ""
-
-#~ msgid "Password"
-#~ msgstr ""
-
-#~ msgid "Confirm Password"
-#~ msgstr ""
-
-#~ msgid "Remember Me"
-#~ msgstr ""
-
-#~ msgid "About me"
-#~ msgstr ""
-
-#~ msgid "Submit"
-#~ msgstr ""
-
-#~ msgid "Say something..."
-#~ msgstr ""
-
-#~ msgid "Request Password Reset"
-#~ msgstr ""
-
-#~ msgid "Confirm password"
-#~ msgstr ""
-
-#~ msgid "Reset Password"
-#~ msgstr ""
+#: app/templates/user.html:25
+msgid "Unfollow"
+msgstr ""
 

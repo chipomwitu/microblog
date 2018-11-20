@@ -4,6 +4,7 @@ from config import Config
 
 from flask import Flask, request
 from flask_babel import Babel
+from flask_babel import lazy_gettext as _1
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_mail import Mail
@@ -20,6 +21,7 @@ app.config.from_object(Config)
 
 login=LoginManager(app)
 login.login_view='login'
+login.login_message=_1('Please log in to access this page.')
 
 babel=Babel(app)
 bootstrap=Bootstrap(app)

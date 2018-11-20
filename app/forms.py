@@ -1,6 +1,6 @@
 from app.models import User
 
-from flask_babel import lazy_gettext as _1
+from flask_babel import _, lazy_gettext as _1
 from flask_wtf import FlaskForm
 
 from wtforms import BooleanField, PasswordField, StringField, SubmitField, TextAreaField
@@ -33,6 +33,7 @@ class EditProfileForm(FlaskForm):
     username=StringField(_1('Username'), validators=[DataRequired()])
     about_me=TextAreaField(_1('About me'), validators=[Length(min=0, max=140)])
     submit=SubmitField(_1('Submit'))
+    # cancel=SubmitField(_1('Cancel'))
 
     def __init__(self, original_username, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)

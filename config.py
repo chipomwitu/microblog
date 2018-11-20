@@ -20,5 +20,4 @@ class Config(object):
     POSTS_PER_PAGE=20
 
     # Languages
-    LANGUAGES=['en', 'es']
-    # LANGUAGES=['pt-BR', 'en-GB', 'sw-KE']
+    LANGUAGES=['en', 'es', 'pt']
