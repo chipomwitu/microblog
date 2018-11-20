@@ -1,6 +1,6 @@
 # export FLASK_APP=microblog.py
 
-from app import app, db
+from app import app, cli, db
 from app.models import User, Post
 
 @app.shell_context_processor

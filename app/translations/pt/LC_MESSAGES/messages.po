@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-11-20 10:40+0300\n"
-"PO-Revision-Date: 2018-10-25 21:26+0300\n"
+"POT-Creation-Date: 2018-11-20 11:32+0300\n"
+"PO-Revision-Date: 2018-11-20 11:32+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
 "Language-Team: pt <LL@li.org>\n"
@@ -206,7 +206,4 @@ msgstr ""
 #: app/templates/user.html:25
 msgid "Unfollow"
 msgstr ""
-
-#~ msgid "%(count)d }} followers"
-#~ msgstr ""
 
