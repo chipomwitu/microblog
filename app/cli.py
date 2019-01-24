@@ -1,46 +1,45 @@
-from app import app
-
 import click
 import os
 
-@app.cli.group()
-def translate():
+def register(app):
+    @app.cli.group()
+    def translate():
 
-    """Translation and localization commands."""
+        """Translation and localization commands."""
 
-    pass
+        pass
 
-@translate.command()
-@click.argument('lang')
-def init(lang):
+    @translate.command()
+    @click.argument('lang')
+    def init(lang):
 
-    """Initialize a new language."""
+        """Initialize a new language."""
 
-    if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
-        raise RuntimeError('Extract command failed')
+        if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
+            raise RuntimeError('Extract command failed')
 
-    if os.system('pybabel init -i messages.pot -d app/translations -l' + lang):
-        raise RuntimeError('init command failed')
+        if os.system('pybabel init -i messages.pot -d app/translations -l' + lang):
+            raise RuntimeError('init command failed')
 
-    os.remove('messages.pot')
+        os.remove('messages.pot')
 
-@translate.command()
-def update():
+    @translate.command()
+    def update():
 
-    """Update all languages."""
+        """Update all languages."""
 
-    if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
-        raise RuntimeError('Extract command failed')
+        if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
+            raise RuntimeError('Extract command failed')
 
-    if os.system('pybabel update -i messages.pot -d app/translations'):
-        raise RuntimeError('Update command failed')
+        if os.system('pybabel update -i messages.pot -d app/translations'):
+            raise RuntimeError('Update command failed')
 
-    os.remove('messages.pot')
+        os.remove('messages.pot')
 
-@translate.command()
-def compile():
+    @translate.command()
+    def compile():
 
-    """Compile all languages."""
+        """Compile all languages."""
 
-    if os.system('pybabel compile -d app/translations'):
-        raise RuntimeError('Compile command failed')
+        if os.system('pybabel compile -d app/translations'):
+            raise RuntimeError('Compile command failed')
