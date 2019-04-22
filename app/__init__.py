@@ -3,6 +3,8 @@ from logging.handlers import SMTPHandler, RotatingFileHandler
 
 from config import Config
 
+from elasticsearch import Elasticsearch
+
 from flask import Flask, request, current_app
 from flask_babel import Babel
 from flask_babel import lazy_gettext as _1
@@ -49,6 +51,9 @@ def create_app(config_class=Config):
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
+    app.elasticsearch=Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
+        if app.config['ELASTICSEARCH_URL'] else None
+
     if not app.debug:
         # Send errors to email
         if app.config['MAIL_SERVER']:
@@ -89,3 +94,4 @@ def get_locale():
     # return 'es'
 
 from app import models
+

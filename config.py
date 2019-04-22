@@ -24,3 +24,7 @@ class Config(object):
 
     # Languages
     LANGUAGES=['en', 'es', 'pt']
+
+    # Elasticsearch
+    ELASTICSEARCH_URL=os.environ.get('ELASTICSEARCH_URL')
+
